@@ -15,10 +15,10 @@ import java.util.List;
 
 /**
  * Created by mybatis-demo
- * Author: hushuang
+ * Author: sunlight001
  * Date: 2017/11/9
  * Time: 上午11:39
- * Email: hd1611756908@163.com
+ * Email: 903635811@qq.com
  * Description :采用SimpleUserMapper.xml名称空间方式调用接口
  */
 public class SimpleUserTest1 {

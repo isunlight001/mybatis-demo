@@ -18,10 +18,10 @@ import java.util.List;
 
 /**
  * Created by mybatis-demo
- * Author: hushuang
+ * Author: sunlight001
  * Date: 2017/11/10
  * Time: 上午9:38
- * Email: hd1611756908@163.com
+ * Email: 903635811@qq.com
  * Description : 分页插件的测试类
  */
 @RunWith(SpringJUnit4ClassRunner.class)

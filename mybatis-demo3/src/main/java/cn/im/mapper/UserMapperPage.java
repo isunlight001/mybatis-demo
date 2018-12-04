@@ -9,10 +9,10 @@ import java.util.List;
 
 /**
  * Created by mybatis-demo
- * Author: hushuang
+ * Author: sunlight001
  * Date: 2017/11/9
  * Time: 下午1:48
- * Email: hd1611756908@163.com
+ * Email: 903635811@qq.com
  * Description : 测试分页查询
  */
 public interface UserMapperPage {

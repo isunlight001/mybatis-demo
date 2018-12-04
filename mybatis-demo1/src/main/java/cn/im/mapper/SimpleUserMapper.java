@@ -6,10 +6,10 @@ import java.util.List;
 
 /**
  * Created by mybatis-demo
- * Author: hushuang
+ * Author: sunlight001
  * Date: 2017/11/9
  * Time: 上午10:45
- * Email: hd1611756908@163.com
+ * Email: 903635811@qq.com
  * Description : 创建操作数据库User表映射的接口类
  */
 public interface SimpleUserMapper {

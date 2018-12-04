@@ -5,10 +5,10 @@ import java.util.HashMap;
 
 /**
  * Created by mybatis-demo
- * Author: hushuang
+ * Author: sunlight001
  * Date: 2017/11/9
  * Time: 上午10:11
- * Email: hd1611756908@163.com
+ * Email: 903635811@qq.com
  * Description :创建映射数据库的实体对象
  */
 public class User {
