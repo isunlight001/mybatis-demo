@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.im.mapper.SimpleUserMapper">
+
+    <!--  添加一个用户 -->
+    <insert id="addUser" parameterType="cn.im.domain.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (username,email,age,gender,create_time,update_time) VALUES (#{username},#{email},#{age},#{gender},#{createTime},#{updateTime})
+    </insert>
+    <!-- 根据用户ID查询一个用户信息 -->
+    <select id="findUserById" resultType="cn.im.domain.User">
+        SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user WHERE id=#{id}
+    </select>
+
+    <!-- 查询全部用户信息 -->
+    <select id="findUsers" resultType="cn.im.domain.User">
+        SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user
+    </select>
+
+    <!-- 更新用户信息 -->
+    <update id="updateUser" parameterType="cn.im.domain.User">
+        UPDATE user
+        <set>
+            <if test="username!=null">username=#{username},</if>
+            <if test="email!=null">email=#{email},</if>
+            <if test="age!=0">age=#{age},</if>
+            <if test="gender!=0">gender=#{gender},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="updateTime==null">update_time=now()</if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+
+    <!-- 删除用户 -->
+    <delete id="deleteUserById">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+
+</mapper>

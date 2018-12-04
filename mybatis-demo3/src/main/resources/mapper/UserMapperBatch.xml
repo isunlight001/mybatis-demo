@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.im.mapper.UserMapperBatch">
+
+
+    <!-- 批量插入 -->
+    <insert id="batchAddUsers" parameterType="user" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO USER(username,email,age,gender,create_time,update_time) VALUES
+        <foreach collection="list" separator="," item="item">
+            (#{item.username},#{item.email},#{item.age},#{item.gender},#{item.createTime},#{item.updateTime})
+        </foreach>
+    </insert>
+
+    <!-- 批量更新 -->
+    <update id="batchUpdateUsers" parameterType="user">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE user 
+            <set>
+                <if test="item.username!=null">username=#{item.username},</if>
+                <if test="item.email!=null">email=#{item.email},</if>
+                <if test="item.gender!=0">gender=#{item.gender},</if>
+                <if test="item.age!=0">age=#{item.age},</if>
+                <if test="item.updateTime==null">update_time=now()</if>
+            </set>
+            WHERE id=#{item.id}
+        </foreach>
+    </update>
+
+    <!-- 批量查询 -->
+    <select id="batchFindUsers" resultType="user">
+        SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user WHERE id IN 
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <!-- 批量删除 -->
+    <delete id="batchDeleteUsersByIds">
+        DELETE FROM user WHERE id IN 
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+          #{item}
+        </foreach>
+    </delete>
+
+
+
+</mapper>
