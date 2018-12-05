@@ -1,7 +1,5 @@
-package cn.im;
+package cn.sunlight001;
 
-import cn.im.domain.User;
-import cn.im.mapper.UserMapperBatch;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -9,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import cn.sunlight001.domain.User;
+import cn.sunlight001.mapper.UserMapperBatch;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;

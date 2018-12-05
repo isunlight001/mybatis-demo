@@ -1,7 +1,9 @@
-package cn.im.mapper;
+package cn.sunlight001.mapper;
 
-import cn.im.domain.User;
 import com.github.pagehelper.PageRowBounds;
+
+import cn.sunlight001.domain.User;
+
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 

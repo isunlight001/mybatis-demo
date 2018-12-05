@@ -2,24 +2,24 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.im.mapper.SimpleUserMapper">
+<mapper namespace="cn.sunlight001.mapper.SimpleUserMapper">
 
     <!--  添加一个用户 -->
-    <insert id="addUser" parameterType="cn.im.domain.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addUser" parameterType="cn.sunlight001.domain.User" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO user (username,email,age,gender,create_time,update_time) VALUES (#{username},#{email},#{age},#{gender},#{createTime},#{updateTime})
     </insert>
     <!-- 根据用户ID查询一个用户信息 -->
-    <select id="findUserById" resultType="cn.im.domain.User">
+    <select id="findUserById" resultType="cn.sunlight001.domain.User">
         SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user WHERE id=#{id}
     </select>
 
     <!-- 查询全部用户信息 -->
-    <select id="findUsers" resultType="cn.im.domain.User">
+    <select id="findUsers" resultType="cn.sunlight001.domain.User">
         SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user
     </select>
 
     <!-- 更新用户信息 -->
-    <update id="updateUser" parameterType="cn.im.domain.User">
+    <update id="updateUser" parameterType="cn.sunlight001.domain.User">
         UPDATE user
         <set>
             <if test="username!=null">username=#{username},</if>

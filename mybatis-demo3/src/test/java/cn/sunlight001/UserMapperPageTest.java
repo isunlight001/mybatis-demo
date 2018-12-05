@@ -1,10 +1,12 @@
-package cn.im;
+package cn.sunlight001;
 
-import cn.im.domain.User;
-import cn.im.mapper.UserMapperPage;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.PageRowBounds;
+
+import cn.sunlight001.domain.User;
+import cn.sunlight001.mapper.UserMapperPage;
+
 import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 import org.junit.runner.RunWith;

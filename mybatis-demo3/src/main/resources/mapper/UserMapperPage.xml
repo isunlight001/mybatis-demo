@@ -2,18 +2,18 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.im.mapper.UserMapperPage">
+<mapper namespace="cn.sunlight001.mapper.UserMapperPage">
 
-    <select id="findPageUser" resultType="cn.im.domain.User">
+    <select id="findPageUser" resultType="cn.sunlight001.domain.User">
         SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user
     </select>
 
 
-    <select id="findPageByNumAndSize" resultType="cn.im.domain.User" parameterType="int">
+    <select id="findPageByNumAndSize" resultType="cn.sunlight001.domain.User" parameterType="int">
         SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user
     </select>
 
-    <select id="findPageByRowNum" resultType="cn.im.domain.User">
+    <select id="findPageByRowNum" resultType="cn.sunlight001.domain.User">
         SELECT id,username,email,age,gender,create_time as createTime,update_time as updateTime FROM user
     </select>
 

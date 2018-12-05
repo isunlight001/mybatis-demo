@@ -1,6 +1,7 @@
-package cn.im.domain;
+package cn.sunlight001.domain;
 
 import java.util.Date;
+import java.util.HashMap;
 
 /**
  * Created by mybatis-demo
@@ -11,7 +12,7 @@ import java.util.Date;
  * Description :创建映射数据库的实体对象
  */
 public class User {
-
+	HashMap m;
     //用户ID
     private Integer id;
     //用户名称

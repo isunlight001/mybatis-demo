@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.im.mapper.UserMapperBatch">
+<mapper namespace="cn.sunlight001.mapper.UserMapperBatch">
 
 
     <!-- 批量插入 -->

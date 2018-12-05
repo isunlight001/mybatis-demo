@@ -1,8 +1,8 @@
-package cn.im.mapper;
-
-import cn.im.domain.User;
+package cn.sunlight001.mapper;
 
 import java.util.List;
+
+import cn.sunlight001.domain.User;
 
 /**
  * Created by mybatis-demo

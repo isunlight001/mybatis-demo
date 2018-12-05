@@ -1,12 +1,13 @@
-package cn.im;
+package cn.sunlight001;
 
-import cn.im.domain.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import cn.sunlight001.domain.User;
 
 import java.io.IOException;
 import java.io.InputStream;
