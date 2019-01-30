@@ -79,7 +79,6 @@
 
     <modules>
         <module>mybatis-demo1</module>
-        <module>mybatis-demo2</module>
         <module>mybatis-demo3</module>
     </modules>
 
