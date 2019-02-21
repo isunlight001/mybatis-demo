@@ -56,9 +56,9 @@ public class UserBatchTest {
     @Test
     public void testBatchFindUsers(){
         List<Integer> ids = new ArrayList<Integer>();
-        ids.add(1000);
-        ids.add(1001);
-        ids.add(1002);
+        ids.add(1010);
+        ids.add(1011);
+        ids.add(1012);
         try {
             List<User> users = userMapper.batchFindUsers(ids);
             LOG.info("用户数量count={},用户列表users={}",users.size(),users);
